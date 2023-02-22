@@ -1,0 +1,147 @@
+*{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+header{
+     padding: 0.5rem;
+     background-color: black;
+     min-height: 10vh;
+}
+
+section {
+    min-height: 10vh;
+}
+
+main {
+    min-height: 70vh;
+}
+
+nav {
+    display: flex;
+}
+
+nav img{
+    width: 10rem;
+    height: 3rem;
+    padding-left: 2rem;
+}
+
+#button{
+    padding-right: 2rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+.subtitle{
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 1.5rem;
+    background-color: hsl(0, 4%, 72%);
+}
+
+.subtitle img{
+    width: 2rem;
+    height: 2rem;
+}
+
+form{
+    padding: 2rem;
+    margin: 1rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    background-color: rgb(235, 231, 235);
+}
+
+main{
+    padding: 2rem;
+    padding-top: 0;
+    margin: 2rem;
+    margin-top: 0.5rem;
+}
+
+table {
+    margin: 0;
+    padding-top: 0;
+    width: 90%;
+    border: solid grey;
+}
+
+td{
+    width: 20rem;
+    height: 2.5rem;
+}
+
+.contenedor form{
+    display: inline-block;
+    background-color: white;
+    justify-content: space-evenly;
+}
+
+.fotocard{
+    height: 10rem;
+    object-fit: cover;
+}
+
+.row{
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card{
+    text-align: center;
+}
+
+.card3{
+    display: flex;
+    justify-content: space-around;
+}
+
+#details{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+#textdet{
+    text-align: center;
+    border: 4px solid grey;
+    background-color: rgb(235, 231, 235);
+}
+
+#foto_d{
+    display: flex;
+    object-fit: cover;
+    width: 100%;
+    border: 4px solid grey;
+    background-color: grey;
+}
+
+footer{
+  background-color: rgb(208, 201, 208);
+  display: inline-flex;
+  width: 100%;
+  height: 5rem;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  min-height: 10vh;
+}
+
+h3{
+   position: absolute;
+   left: 80%;
+}
+
+ footer img {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 2rem;
+}
+

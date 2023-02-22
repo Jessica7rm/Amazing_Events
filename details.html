@@ -1,13 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Details</title>
     <link rel="shortcut icon" href="assets/img/LogoAmazingEvents.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-    
+    <header>
+        <nav class="navbar navbar-expand-lg" style="background-color: black;">
+            <div class="container-fluid">
+                <a class="navbar-brand"><img src="./assets/img/LogoAmazingEvents.png" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="button">
+                        <li class="nav-item">
+                            <a href="./index.html" class="btn btn-outline-light btn-lg" role="button">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="btn btn-outline-light btn-lg" role="button">Upcoming Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./past_events.html" class="btn btn-outline-light btn-lg" role="button">Past
+                                Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./contact.html" class="btn btn-outline-light btn-lg" role="button">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./stats.html" class="btn btn-outline-light btn-lg" role="button">Stats</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="subtitle">
+        <img src="./assets/img/hacia-atras.png" alt="atras">
+        <h2>Details</h2>
+        <img src="./assets/img/adelante.png" alt="adelante">
+    </section>
+    <main>
+        <div id="details">
+            <div class="card" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col" id="foto_d">
+                        <img src="./assets/img/Marathon.jpg" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col">
+                        <div class="card-body" id="textdet">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <a href="#"><img src="./assets/img/instagram.png" alt="instagram"></a>
+            <a href="#"><img src="./assets/img/facebook.png" alt="facebook"></a>
+            <a href="#"><img src="./assets/img/whatsapp.png" alt="whatsapp"></a>
+        </div>
+        <div>
+            <h3>Cohort</h3>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
