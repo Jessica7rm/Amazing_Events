@@ -37,9 +37,17 @@ nav img{
 
 
 .subtitle{
-    text-align: center;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    justify-content: space-around;
     padding: 1.5rem;
     background-color: hsl(0, 4%, 72%);
+}
+
+.subtitle img{
+    width: 2rem;
+    height: 2rem;
 }
 
 form{
