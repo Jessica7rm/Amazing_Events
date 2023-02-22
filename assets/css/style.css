@@ -2,11 +2,21 @@
     font-family: sans-serif;
     padding: 0;
     margin: 0; 
+    box-sizing: border-box;
 }
 
 header{
      padding: 0.5rem;
      background-color: black;
+     min-height: 10vh;
+}
+
+section {
+    min-height: 10vh;
+}
+
+main {
+    min-height: 70vh;
 }
 
 nav {
@@ -70,11 +80,12 @@ td{
     object-fit: cover;
 }
 
-.card-group{
+.row{
+    justify-content: center;
     gap: 1rem;
-    padding: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+}
+
+.card{
     text-align: center;
 }
 
@@ -112,14 +123,17 @@ footer{
   padding: 1rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  min-height: 10vh;
 }
 
-footer h3{
-  padding-left: 50rem;
+h3{
+   position: absolute;
+   left: 80%;
 }
 
  footer img {
     width: 3rem;
     height: 3rem;
+    margin-left: 2rem;
 }
 
