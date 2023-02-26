@@ -11,13 +11,15 @@ header {
     min-height: 10vh;
 }
 
-section {
-    min-height: 10vh;
+main {
+    padding: 2rem;
+    padding-top: 0;
+    margin: 2rem;
+    margin-top: 0.5rem;
+     min-height: 70vh;
 }
 
-main {
-    min-height: 70vh;
-}
+/* navbar */
 
 nav {
     display: flex;
@@ -35,6 +37,7 @@ nav img {
     align-items: center;
 }
 
+/* titulo_pagina */
 
 .subtitle {
     display: inline-flex;
@@ -50,20 +53,33 @@ nav img {
     height: 2rem;
 }
 
+section {
+    min-height: 10vh;
+}
+
+/* checkbox */
+
+#checkbox input {
+    margin-left: 1rem;
+}
+
+/* formulario */
+
 form {
     padding: 2rem;
     margin: 1rem;
     padding-left: 5rem;
     padding-right: 5rem;
-    background-color: rgb(235, 231, 235);
+    background-color: rgb(194, 194, 194);
 }
 
-main {
-    padding: 2rem;
-    padding-top: 0;
-    margin: 2rem;
-    margin-top: 0.5rem;
+.contenedor form {
+    display: inline-block;
+    background-color: white;
+    justify-content: space-evenly;
 }
+
+/* tabla */
 
 table {
     justify-content: center;
@@ -72,8 +88,11 @@ table {
     border: solid grey;
 }
 
-td,
-th {
+.table-secondary {
+    font-weight: bolder;
+}
+
+td, th {
     width: 100%;
 }
 
@@ -82,11 +101,7 @@ td {
     height: 2.5rem;
 }
 
-.contenedor form {
-    display: inline-block;
-    background-color: white;
-    justify-content: space-evenly;
-}
+/* cards events */
 
 .fotocard {
     height: 10rem;
@@ -101,6 +116,7 @@ td {
 
 .card {
     text-align: center;
+    box-shadow: 10px 10px 5px;
 }
 
 .card3 {
@@ -108,23 +124,27 @@ td {
     justify-content: space-around;
 }
 
-.det_img img{
+/* card details */
+
+.cont_det {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.det_img img {
     object-fit: cover;
     height: 100%;
 }
 
-.card_det{
+.card_det {
     padding: 1rem;
     background-color: rgb(232, 222, 222);
     border: 5px solid rgb(134, 132, 132);
+    box-shadow: 20px 20px 15px;
 }
 
-.cont_det{
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    padding-top: 2rem;
-}
+/* footer */
 
 footer {
     background-color: rgb(208, 201, 208);
@@ -145,6 +165,7 @@ footer {
     height: 3rem;
     margin-left: 2rem;
 }
+
 
 @media (max-width:750px) {
     form {
@@ -174,17 +195,11 @@ footer {
     .iconos img {
         margin-left: 1rem;
     }
-    .details_card {
-        max-width: 450px;
-    }
 }
 
 @media (max-width:500px) {
     main {
         padding: 1rem;
         margin: 1rem;
-    }
-    .details_card {
-        max-width: 400px;
     }
 }
