@@ -22,7 +22,8 @@ contenedorDetail.innerHTML = `
                 </div>
                 <div class="card3">
                     <p class="card-text">Category: ${events.category}</p>
-                    <p class="card-text">Assistance: ${events.assistance}</p>
+                    <p>${events.assistance !== undefined ? 'Assistance: ' + events.assistance : ''}</p>
+                    <p>${events.estimate !== undefined ? 'Estimate: ' + events.estimate : ''}</p>
                 </div>
                 <div class="card3">
                     <p class="card-text">Capacity: ${events.capacity}</p>
@@ -33,3 +34,5 @@ contenedorDetail.innerHTML = `
         </div>
     </div>
 `
+
+ //<p class="card-text">Assistance / Estimada: ${events.assistance}</p>
