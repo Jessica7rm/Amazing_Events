@@ -15,13 +15,14 @@ input.addEventListener('input',dobleFiltro)
 
 contenedorCheckbox.addEventListener('change',dobleFiltro)
 
-eventosPasados(Events, currentDate);
+eventosPasados(Events);
 crearCheckbox(Events);
+
 
 function dobleFiltro(){
   let filtroArray = filtroBuscador(Events, input.value)
- let arrayFiltrado = filtrarPorCategory(filtroArray)
-   eventosTodos(arrayFiltrado)
+  let arrayFiltrado = filtrarPorCategory(filtroArray)
+  eventosPasados(arrayFiltrado)
 }
 
 function crearCheckbox(array){
@@ -79,6 +80,7 @@ function eventosPasados(array) {
     })
   }
 }
+
 
 
 
