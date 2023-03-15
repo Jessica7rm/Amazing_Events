@@ -15,12 +15,11 @@ input.addEventListener('input',dobleFiltro)
 
 contenedorCheckbox.addEventListener('change',dobleFiltro)
 
-eventosPasados(Events);
-crearCheckbox(Events);
-
+eventosPasados(arrayFecha);
+crearCheckbox(arrayFecha);
 
 function dobleFiltro(){
-  let filtroArray = filtroBuscador(Events, input.value)
+  let filtroArray = filtroBuscador(arrayFecha, input.value)
   let arrayFiltrado = filtrarPorCategory(filtroArray)
   eventosPasados(arrayFiltrado)
 }
@@ -61,8 +60,7 @@ function eventosPasados(array) {
     return
   }
   let pastEvents = ""
-  if (array.length !== 0) {
-    arrayFecha.forEach(evento => {
+    array.forEach(evento => {
       pastEvents += `
     <div class="card" style="width: 17rem;">
         <img src="${evento.image}" class="card-img-top fotocard" alt="${evento.name}"> 
@@ -76,10 +74,11 @@ function eventosPasados(array) {
             <a href="./details.html?id=${evento._id}" class="btn btn-outline-secondary">More details</a>
       </div>
   </div>`
-      contenedorCards.innerHTML = pastEvents
+      
     })
+    contenedorCards.innerHTML = pastEvents;
   }
-}
+
 
 
 

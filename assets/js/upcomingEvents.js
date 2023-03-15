@@ -14,11 +14,11 @@ input.addEventListener('input',dobleFiltro)
 
 contenedorCheckbox.addEventListener('change',dobleFiltro)
 
-eventosFuturos(Events)
-crearCheckbox(Events);
+eventosFuturos(arrayFecha)
+crearCheckbox(arrayFecha);
 
 function dobleFiltro(){
-  let filtroArray = filtroBuscador(Events, input.value)
+  let filtroArray = filtroBuscador(arrayFecha, input.value)
  let arrayFiltrado = filtrarPorCategory(filtroArray)
    eventosFuturos(arrayFiltrado)
 }
@@ -56,9 +56,12 @@ function filtrarPorCategory(array){
 //console.log(currentDate)
 
 function eventosFuturos(array) {
+  if(array.length == 0){
+    contenedorCards.innerHTML = "<h2> No hay elementos </h2>"
+    return
+  }
   let upcomingEvents = "";
-  if (array.length !== 0) {
-   arrayFecha.forEach(evento => {
+   array.forEach(evento => {
     upcomingEvents += `
     <div class="card" style="width: 17rem;">
       <img src="${evento.image}" class="card-img-top fotocard" alt="${evento.name}"> 
@@ -72,10 +75,10 @@ function eventosFuturos(array) {
        <a href="./details.html?id=${evento._id}" class="btn btn-outline-secondary">More details</a>
     </div>
   </div>`
-  contenedorCards.innerHTML = upcomingEvents
     })
+    contenedorCards.innerHTML = upcomingEvents;
   }
-}
+
 
 
 
