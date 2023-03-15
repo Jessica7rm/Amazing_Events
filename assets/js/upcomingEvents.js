@@ -3,7 +3,7 @@ const Events = data.events
 
 let currentDate = data.currentDate
 
-let arrayFiltrado = Events.filter(evento => currentDate < evento.date)
+let arrayFecha = Events.filter(evento => currentDate < evento.date)
 
 let contenedorCards = document.getElementById("cards");
 
@@ -58,7 +58,7 @@ function filtrarPorCategory(array){
 function eventosPasados(array) {
   let upcomingEvents = "";
   if (array.length !== 0) {
-   arrayFiltrado.forEach(evento => {
+   arrayFecha.forEach(evento => {
     upcomingEvents += `
     <div class="card" style="width: 17rem;">
       <img src="${evento.image}" class="card-img-top fotocard" alt="${evento.name}"> 

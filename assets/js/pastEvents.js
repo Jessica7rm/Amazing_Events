@@ -2,7 +2,7 @@ const Events = data.events
 
 let currentDate = data.currentDate
 
-let arrayFiltrado = Events.filter(evento => currentDate > evento.date)
+let arrayFecha = Events.filter(evento => currentDate > evento.date)
 
 //console.log(currentDate)
 
@@ -61,7 +61,7 @@ function eventosPasados(array) {
   }
   let pastEvents = ""
   if (array.length !== 0) {
-    arrayFiltrado.forEach(evento => {
+    arrayFecha.forEach(evento => {
       pastEvents += `
     <div class="card" style="width: 17rem;">
         <img src="${evento.image}" class="card-img-top fotocard" alt="${evento.name}"> 
