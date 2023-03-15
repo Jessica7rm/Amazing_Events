@@ -59,25 +59,29 @@ section {
 
 /* checkbox */
 
-#checkbox input {
+.checkbox input {
     margin-left: 1rem;
 }
 
-/* formulario */
-
-form {
-    padding: 2rem;
-    margin: 1rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    background-color: rgb(194, 194, 194);
+/* formulario 
+*/
+#checkbox {
+    padding-top: 2rem;
+    justify-content: center;
 }
 
-.contenedor form {
+.contenedor #checkbox{
     display: inline-block;
-    background-color: white;
-    justify-content: space-evenly;
+    background-color: #d70666;
 }
+
+#buscador {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    background-color: #d70666;
+}
+
 
 /* tabla */
 
@@ -110,6 +114,7 @@ td {
 
 
 .contain {
+    padding-top: 2rem;
     justify-content: center;
     gap: 1rem;
 }
@@ -127,7 +132,7 @@ td {
 
 /* card details */
 
-.cont_det {
+#cont_det {
     display: flex;
     justify-content: center;
     padding-top: 2rem;
