@@ -84,20 +84,26 @@ section {
 
 
 /* tabla */
+.tableS{
+    padding-top: 1rem;
+}
+
+thead{
+    background-color: #d70666;
+}
 
 table {
     justify-content: center;
     margin: 0;
-    margin-top: 2rem;
     border: solid grey;
 }
 
 .table-secondary {
     font-weight: bolder;
 }
-
-td, th {
-    width: 100%;
+/* 
+tr .th {
+   justify-content: space-between; 
 }
 
 td {
@@ -105,7 +111,7 @@ td {
     height: 2.5rem;
 }
 
-/* cards events */
+cards events */
 
 .fotocard {
     height: 10rem;

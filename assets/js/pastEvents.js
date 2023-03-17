@@ -1,67 +1,70 @@
-const Events = data.events
 
-let currentDate = data.currentDate
+let eventsApi
 
-let arrayFecha = Events.filter(evento => currentDate > evento.date)
+fetch("https://mindhub-xj03.onrender.com/api/amazing")
+  .then((response) => response.json())
+  .then(events => {
+    eventsApi = events
+    const Events = eventsApi.events
+    let currentDate = eventsApi.currentDate
+    let arrayFecha = Events.filter(evento => currentDate > evento.date)
+    eventosPasados(arrayFecha);
+    crearCheckbox(arrayFecha);
 
-//console.log(currentDate)
+    function dobleFiltro() {
+      let filtroArray = filtroBuscador(arrayFecha, input.value)
+      let arrayFiltrado = filtrarPorCategory(filtroArray)
+      eventosPasados(arrayFiltrado)
+    }
+    input.addEventListener('input', dobleFiltro)
+
+    contenedorCheckbox.addEventListener('change', dobleFiltro)
+
+  })
 
 let contenedorCards = document.getElementById("cards");
 
 const input = document.querySelector('input')
 const contenedorCheckbox = document.getElementById('checkbox')
 
-input.addEventListener('input',dobleFiltro)
-
-contenedorCheckbox.addEventListener('change',dobleFiltro)
-
-eventosPasados(arrayFecha);
-crearCheckbox(arrayFecha);
-
-function dobleFiltro(){
-  let filtroArray = filtroBuscador(arrayFecha, input.value)
-  let arrayFiltrado = filtrarPorCategory(filtroArray)
-  eventosPasados(arrayFiltrado)
-}
-
-function crearCheckbox(array){
+function crearCheckbox(array) {
   let arrayCategory = array.map(elemento => elemento.category)
   let setCategory = new Set(arrayCategory)
   let check = ''
-  setCategory.forEach(elemento =>{
+  setCategory.forEach(elemento => {
     check += `<div class="form-check form-switch">
     <input class="form-check-input" type="checkbox" role="switch" id="${elemento}" value="${elemento}">
     <label class="form-check-label" for="${elemento}">${elemento}</label>
   </div>  `
-})
- contenedorCheckbox.innerHTML = check
+  })
+  contenedorCheckbox.innerHTML = check
 }
 
-function filtroBuscador(array, texto){
+function filtroBuscador(array, texto) {
   let filtroArray = array.filter(element => element.name.toLowerCase().includes(texto.toLowerCase()))
   return filtroArray
 }
 
-function filtrarPorCategory(array){
+function filtrarPorCategory(array) {
   let checkboxes = document.querySelectorAll("input[type='checkbox']")
   let arrayChecks = Array.from(checkboxes)
   let checksCheckeados = arrayChecks.filter(check => check.checked)
-  if(checksCheckeados.length == 0){
+  if (checksCheckeados.length == 0) {
     return array
   }
   let category = checksCheckeados.map(check => check.value)
   let filtroArray = array.filter(element => category.includes(element.category))
-  return filtroArray 
+  return filtroArray
 }
 
 function eventosPasados(array) {
-  if(array.length == 0){
+  if (array.length == 0) {
     contenedorCards.innerHTML = "<h2> No hay elementos </h2>"
     return
   }
   let pastEvents = ""
-    array.forEach(evento => {
-      pastEvents += `
+  array.forEach(evento => {
+    pastEvents += `
     <div class="card" style="width: 17rem;">
         <img src="${evento.image}" class="card-img-top fotocard" alt="${evento.name}"> 
       <div class="card-body">
@@ -74,10 +77,10 @@ function eventosPasados(array) {
             <a href="./details.html?id=${evento._id}" class="btn btn-outline-secondary">More details</a>
       </div>
   </div>`
-      
-    })
-    contenedorCards.innerHTML = pastEvents;
-  }
+
+  })
+  contenedorCards.innerHTML = pastEvents;
+}
 
 
 

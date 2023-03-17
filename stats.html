@@ -53,70 +53,41 @@
         <a href="./index.html"><img src="./assets/img/adelante.png" alt="adelante"></a>
     </section>
 
-    <main>
+    <main class="tableS">
+        <h4>EVENTS STATISTICS</h4>
         <table class="table table-bordered border-secondary">
             <thead>
                 <tr>
-                    <th colspan="3" class="table-secondary">Events statistics</th>
+                    <th>Events with the highest percentage of attendance</th>
+                    <th>Events with the lowest percentage of attendance</th>
+                    <th>Event with larger capacity</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tableEvents">
+            </tbody>
+        </table>
+        <h4>UPCOMING EVENTS STATISTICS BY CATEGORY</h4>
+        <table class="table table-bordered border-secondary">
+            <thead>
                 <tr>
-                    <td>Events with the highest percentage of attendance</td>
-                    <td>Events with the highest percentage of attendance</td>
-                    <td>Event with larger capacity</td>
+                    <th>Categories</th>
+                    <th>Estimated</th>
+                    <th>Percentage of estimated attendance</th>
                 </tr>
+            </thead>
+            <tbody id="tableUpcoming">
+            </tbody>
+        </table>
+        <h3>PAST EVENTS STATISTICS BY CATEGORY</h3>
+        <table class="table table-bordered border-secondary">
+            <thead>
                 <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
+                    <th>Categories</th>
+                    <th>Revenues</th>
+                    <th>Percentage of attendance</th>
                 </tr>
-                <tr>
-                    <td colspan="3" class="table-secondary">Upcoming events statistics by category</td>
-                </tr>
-                <tr>
-                    <td>Categories</td>
-                    <td>Revenues</td>
-                    <td>Percentage of attendance</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td colspan="3" class="table-secondary">Past Events statistic by category</td>
-                </tr>
-                <tr>
-                    <td>Categories</td>
-                    <td>Revenues</td>
-                    <td>Percentage of attendance</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+            </thead>
+            <tbody id="tablePast">
             </tbody>
         </table>
     </main>
@@ -131,7 +102,7 @@
             <h3>Cohort</h3>
         </div>
     </footer>
-    
+    <script src="./assets/js/stats.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
