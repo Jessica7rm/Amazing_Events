@@ -63,14 +63,14 @@ section {
     margin-left: 1rem;
 }
 
-/* formulario 
-*/
+/* formulario */
+
 #checkbox {
     padding-top: 2rem;
     justify-content: center;
 }
 
-.contenedor #checkbox{
+.contenedor #checkbox {
     display: inline-block;
     background-color: #d70666;
 }
@@ -82,13 +82,13 @@ section {
     background-color: #d70666;
 }
 
-
 /* tabla */
-.tableS{
+
+.tableS {
     padding-top: 1rem;
 }
 
-thead{
+thead {
     background-color: #d70666;
 }
 
@@ -101,23 +101,22 @@ table {
 .table-secondary {
     font-weight: bolder;
 }
-/* 
+
 tr .th {
-   justify-content: space-between; 
+    justify-content: center;
+    width: 100%;
 }
 
 td {
-    width: 20rem;
-    height: 2.5rem;
+    width: 20%;
 }
 
-cards events */
+/* cards events */
 
 .fotocard {
     height: 10rem;
     object-fit: cover;
 }
-
 
 .contain {
     padding-top: 2rem;
@@ -178,6 +177,11 @@ footer {
     margin-left: 2rem;
 }
 
+@media (max-width:990px) {
+    .nav-item .btn {
+        width: 20rem;
+    }
+}
 
 @media (max-width:750px) {
     form {
@@ -213,5 +217,16 @@ footer {
     main {
         padding: 1rem;
         margin: 1rem;
+    }
+
+    .nav-item .btn {
+        width: 15rem;
+    }
+
+    tr .th {
+        width: 10%;
+    }
+    td {
+        width: 10%;
     }
 }
