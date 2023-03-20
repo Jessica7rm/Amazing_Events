@@ -54,27 +54,16 @@
 
     <main>
         <div class="contenedor">
-            <form id="checkbox" action="/action_page.php" method="get">
-                <input type="checkbox" id="category1" name="Category" value="category1">
-                <label for="category1">Category</label>
-                <input type="checkbox" id="category2" name="Category" value="category2">
-                <label for="category2">Category</label>
-                <input type="checkbox" id="category3" name="Category" value="category3">
-                <label for="category3">Category</label>
-                <input type="checkbox" id="category4" name="Category" value="category4">
-                <label for="category4">Category</label>
-                <input type="checkbox" id="category5" name="Category" value="category5">
-                <label for="category5">Category</label>
-            </form>
-
-            <form id="buscador" action="../../form-result.php" method="post" target="_blank">
+            <div id="checkbox" class=" p-3 d-flex flex-wrap gap-3">
+            </div>       
+           
+            <div id="buscador">
                 <p>
-                    <input type="search" name="busquedamusica" placeholder="">
-                    <input type="submit" value="Buscar">
+                    <input type="text" class="form-control" placeholder="Search">
                 </p>
-            </form>
-
+            </div>
         </div>
+        
         <div class="row row-cols-1 row-cols-md-2 g-4 contain" id="cards">
             
         </div>
