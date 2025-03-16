@@ -34,5 +34,3 @@ contenedorDetail.innerHTML = `
         </div>
     </div>
 `
-
- //<p class="card-text">Assistance / Estimada: ${events.assistance}</p>

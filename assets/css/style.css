@@ -63,14 +63,14 @@ section {
     margin-left: 1rem;
 }
 
-/* formulario 
-*/
+/* formulario */
+
 #checkbox {
     padding-top: 2rem;
     justify-content: center;
 }
 
-.contenedor #checkbox{
+.contenedor #checkbox {
     display: inline-block;
     background-color: #d70666;
 }
@@ -82,13 +82,19 @@ section {
     background-color: #d70666;
 }
 
-
 /* tabla */
+
+.tableS {
+    padding-top: 1rem;
+}
+
+thead {
+    background-color: #d70666;
+}
 
 table {
     justify-content: center;
     margin: 0;
-    margin-top: 2rem;
     border: solid grey;
 }
 
@@ -96,13 +102,13 @@ table {
     font-weight: bolder;
 }
 
-td, th {
+tr .th {
+    justify-content: center;
     width: 100%;
 }
 
 td {
-    width: 20rem;
-    height: 2.5rem;
+    width: 20%;
 }
 
 /* cards events */
@@ -111,7 +117,6 @@ td {
     height: 10rem;
     object-fit: cover;
 }
-
 
 .contain {
     padding-top: 2rem;
@@ -172,6 +177,11 @@ footer {
     margin-left: 2rem;
 }
 
+@media (max-width:990px) {
+    .nav-item .btn {
+        width: 20rem;
+    }
+}
 
 @media (max-width:750px) {
     form {
@@ -207,5 +217,16 @@ footer {
     main {
         padding: 1rem;
         margin: 1rem;
+    }
+
+    .nav-item .btn {
+        width: 15rem;
+    }
+
+    tr .th {
+        width: 10%;
+    }
+    td {
+        width: 10%;
     }
 }
