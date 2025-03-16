@@ -5,11 +5,8 @@ let pastTable = document.getElementById("tablePast")
 let eventsApi = ""
 
 async function fromApi() {
-   await fetch("https://mindhub-xj03.onrender.com/api/amazing")
-      .then((response) => response.json())
-      .then(events => eventsApi = events)
-   const Events = eventsApi.events
-   let currentDate = eventsApi.currentDate
+   const Events = data.events
+   let currentDate = data.currentDate
    // console.log(Events)
 
    let arrayUpcoming = Events.filter(evento => currentDate < evento.date)

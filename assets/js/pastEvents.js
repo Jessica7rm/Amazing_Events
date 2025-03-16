@@ -1,31 +1,28 @@
+const Events = data.events
 
-let eventsApi
+let currentDate = data.currentDate
 
-fetch("https://mindhub-xj03.onrender.com/api/amazing")
-  .then((response) => response.json())
-  .then(events => {
-    eventsApi = events
-    const Events = eventsApi.events
-    let currentDate = eventsApi.currentDate
-    let arrayFecha = Events.filter(evento => currentDate > evento.date)
-    eventosPasados(arrayFecha);
-    crearCheckbox(arrayFecha);
+let arrayFecha = Events.filter(evento => currentDate > evento.date)
 
-    function dobleFiltro() {
-      let filtroArray = filtroBuscador(arrayFecha, input.value)
-      let arrayFiltrado = filtrarPorCategory(filtroArray)
-      eventosPasados(arrayFiltrado)
-    }
-    input.addEventListener('input', dobleFiltro)
-
-    contenedorCheckbox.addEventListener('change', dobleFiltro)
-
-  })
+console.log(currentDate)
 
 let contenedorCards = document.getElementById("cards");
 
 const input = document.querySelector('input')
 const contenedorCheckbox = document.getElementById('checkbox')
+
+input.addEventListener('input',dobleFiltro)
+
+contenedorCheckbox.addEventListener('change',dobleFiltro)
+
+eventosPasados(arrayFecha);
+crearCheckbox(arrayFecha);
+
+function dobleFiltro(){
+  let filtroArray = filtroBuscador(arrayFecha, input.value)
+  let arrayFiltrado = filtrarPorCategory(filtroArray)
+  eventosPasados(arrayFiltrado)
+}
 
 function crearCheckbox(array) {
   let arrayCategory = array.map(elemento => elemento.category)

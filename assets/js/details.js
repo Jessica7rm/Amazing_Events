@@ -1,16 +1,10 @@
+const datos = data.events
 
-let eventsApi 
+const id = new URLSearchParams(location.search).get("id")
 
-fetch("https://mindhub-xj03.onrender.com/api/amazing")
-    .then((response) => response.json())
-    .then(respuesta => {
-       eventsApi = respuesta
-       const datos = eventsApi.events
-       const id = new URLSearchParams(location.search).get("id")
-       const events = datos.find(element => element._id == id)
+const events = datos.find(element => element._id == id)
 
-       let contenedorDetail = document.getElementById("cont_det")
-
+let contenedorDetail = document.getElementById("cont_det")
 contenedorDetail.innerHTML = `
 <div class="card mb-3 card_det" style="max-width: 740px;">
         <div class="row g-0">
@@ -40,4 +34,3 @@ contenedorDetail.innerHTML = `
         </div>
     </div>
 `
-})
